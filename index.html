@@ -4,22 +4,26 @@
   
         <!-- jQuery -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <!-- BEGIN TimelineJS -->
-        <script type="text/javascript" src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
-        <script>
-            $(document).ready(function() {
-                createStoryJS({
-                    type:       'timeline',
-                   
-                    source:     'https://docs.google.com/spreadsheet/pub?key=0AmRVBw4WqZk5dHdPRlpQLWNIVTVyODY1WFljaDFPSVE&output=html',
-                    embed_id:   'my-timeline'
-                });
-            });
-        </script>
-        <!-- END TimelineJS -->
+
     </head>
     <body>  
-        <div id="my-timeline"></div>
-    </body>
 
+      <!-- BEGIN Timeline Embed -->
+       <div id="timeline-embed"></div>
+
+    <script type="text/javascript">
+        var timeline_config = {
+            source:             'https://docs.google.com/spreadsheet/pub?key=0AmRVBw4WqZk5dHdPRlpQLWNIVTVyODY1WFljaDFPSVE&output=html',
+            embed_id:           'timeline-embed',               //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED
+            start_at_end:       true,                          //OPTIONAL START AT LATEST DATE
+          
+            font:               'Bevan-PotanoSans',             //OPTIONAL FONT
+            debug:              true,                           //OPTIONAL DEBUG TO CONSOLE
+            lang:               'en',                           //OPTIONAL LANGUAGE
+            maptype:            'watercolor',                   //OPTIONAL MAP STYLE
+            css:                'http://cdn.knightlab.com/libs/timeline/latest/css/timeline.css',     //OPTIONAL PATH TO CSS
+            js:                 'http://cdn.knightlab.com/libs/timeline/latest/js/timeline.js'    //OPTIONAL PATH TO JS
+        }
+    </script>
+  </body>
 </html>
